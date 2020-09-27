@@ -53,7 +53,7 @@ const Header = () => {
         <div className={classes.root}>
             <AppBar potition="fixed" className={classes.menuBar}>
                 <ToolBar className={classes.toolBar}>
-                    <p>山﨑 孝二</p>
+                    <p>番組表</p>
                     <div>
                         <TextInput
                             fullWidth={false} label={"タイトル入力"} multiline={false} required={false} 

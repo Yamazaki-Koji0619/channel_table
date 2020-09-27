@@ -44,6 +44,8 @@ const DrawerMenu = (props) => {
         props.handleDrawerToggle(event)
     };
 
+    console.log(state.channel)
+
     return(
         <nav>
             <Drawer
