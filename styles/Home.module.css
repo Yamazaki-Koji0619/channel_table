@@ -75,3 +75,15 @@
 .list_click_span{
     color: rgba(0,0,0,0.5);
 }
+
+
+.manu{
+    width: 750px;
+    margin: 0 auto;
+    padding-top: 65px;
+}
+
+.menu_flex{
+    display: flex;
+    justify-content: space-around;
+}

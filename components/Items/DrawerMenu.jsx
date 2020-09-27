@@ -23,28 +23,19 @@ const DrawerMenu = (props) => {
 
     const {container} = props;
     const classes = useStyles();
-    const { state, dispatch } = useContext(SiteContext);
 
     const menuItem = [
-        {label: 'ABEMA NEWS/', channel: 'ch_0'},
-        {label: 'ABEMA SPECIAL', channel: 'ch_1'},
-        {label: 'ABEMA GOLD', channel: 'ch_2'},
-        {label: 'ABEMA アニメ', channel: 'ch_3'},
-        {label: '行動指針', channel: 'ch_4'}
+        {label: 'ABEMA NEWS/', channel: '/channel/ch-0'},
+        {label: 'ABEMA SPECIAL', channel: '/channel/ch-1'},
+        {label: 'ABEMA GOLD', channel: '/channel/ch-2'},
+        {label: 'ABEMA アニメ', channel: '/channel/ch-3'},
+        {label: '行動指針', channel: '/channel/ch-4'}
     ];
-
-    const channelName = (channel) => {
-        dispatch({
-            type: 'CHANGE_ROUTE',
-            payload: channel
-        });
-    }
 
     const selectMenu = (event) => {
         props.handleDrawerToggle(event)
     };
 
-    console.log(state.channel)
 
     return(
         <nav>
@@ -61,8 +52,8 @@ const DrawerMenu = (props) => {
                 <Divider />
                 <List>
                     {menuItem.map((item, index) => (
-                        <ListItem key={index} onClick={() => channelName(item.channel)} >
-                            <Link href="/channel">
+                        <ListItem key={index}>
+                            <Link href={item.channel}>
                                 <ListItemText primary={item.label} />
                             </Link>
                         </ListItem>
